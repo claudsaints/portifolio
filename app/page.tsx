@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -9,10 +10,16 @@ import TechnologyCard from './components/TecnologyCard';
 import { FaArrowAltCircleRight,FaArrowAltCircleLeft} from "react-icons/fa";
 
 const colors = [
-  'bg-gradient-to-r from-pink-500 to-purple-600',
-  'bg-gradient-to-r from-blue-500 to-green-500',
-  'bg-gradient-to-r from-red-500 to-yellow-500',
+  // De pink para roxo escuro - mais contraste
+  'bg-gradient-to-r from-pink-700 to-purple-800', 
+
+  // De azul para verde escuro - mais contraste
+  'bg-gradient-to-r from-blue-700 to-green-700', 
+
+  // De vermelho para laranja escuro - mais contraste
+  'bg-gradient-to-r from-red-700 to-yellow-700',
 ];
+
 
 export default function Home() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -47,7 +54,13 @@ export default function Home() {
           <img src="/path/to/profile.jpg" alt="Perfil" className="w-40 h-40 rounded-full border-4 border-white shadow-lg" />
           <h2 className="mt-4 text-lg font-semibold">Claudio Dos Santos</h2>
           <h3>Desenvolvedor De Software</h3>
-          <p className="text-gray-400">Uma breve descrição sobre mim e meu trabalho.</p>
+          <p className="text-gray-400">Sou desenvolvedor full-stack com uma paixão por criar soluções que façam a diferença. Adoro tanto o backend quanto o frontend, mas é no backend que realmente encontro meu espaço, onde posso otimizar processos e construir sistemas robustos e eficientes.
+
+Sou proativo e aprendo rápido, o que me permite me adaptar facilmente a novas tecnologias e desafios. Adoro trabalhar em equipe, onde posso colaborar e aprender com os outros, sempre buscando melhorar cada vez mais.
+
+Tenho experiência com tecnologias como JavaScript, TypeScript, React, Node.js, NestJS, e Spring, além de trabalhar com bancos de dados como PostgreSQL, MySQL e MongoDB. O que me motiva é ver o impacto das soluções que crio, e estou sempre em busca de novos projetos que me desafiem e me permitam crescer.
+
+Se você está procurando por um desenvolvedor apaixonado, disposto a aprender e contribuir com ideias novas, ficarei feliz em conectar!</p>
         </div>
       </Section>
 
