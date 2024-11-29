@@ -20,6 +20,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+  font-weight: bold;
+}
+
+@keyframes pulseBlack {
+  0% {
+    background-color: #000000; 
+  }
+  50% {
+    background-color: #333333; 
+  }
+  100% {
+    background-color: #000000; 
+  }
+}
+
+
+.pulse-bg {
+  animation: pulseBlack 2s infinite; 
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

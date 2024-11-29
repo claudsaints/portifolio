@@ -40,7 +40,7 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold text-white">{project.title}</h2>
+          <h2 className="text-4xl font-bold text-white ">{project.title}</h2>
 
           <p className="mt-2 text-gray-200">{project.description}</p>
 
