@@ -23,27 +23,38 @@ const colors = [
 ];
 
 export default function Home() {
+
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [currentTechIndex, setCurrentTechIndex] = useState(0);
 
   const nextProject = () => {
-    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    if (projects.length > 0) {
+      setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
+    }
   };
 
   const prevProject = () => {
-    setCurrentProjectIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
+    if (projects.length > 0) {
+      setCurrentProjectIndex(
+        (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+      );
+    }
   };
 
   const nextTech = () => {
-    setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
+    if (technologies.length > 0) {
+      setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
+    }
   };
 
+
   useEffect(() => {
-    const interval = setInterval(nextTech, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    if (technologies.length > 0) {
+      const interval = setInterval(nextTech, 3000);
+      return () => clearInterval(interval);
+    }
+  }, []); 
+  
 
   return (
     <div className="flex flex-col bg-black text-white">
@@ -51,11 +62,11 @@ export default function Home() {
         <a href="#contato">Contato</a>
       </header>
       <Section>
-        <div className="flex flex-col items-center mt-2">
+        <div className="flex flex-col items-center mt-3">
           <Image
             src={profilePic}
             alt="Perfil"
-            className="rounded-full border-4 border-white shadow-lg  w-64 h-64"
+            className="rounded-full border-4 border-white shadow-lg  mt-4 w-64 h-64"
           />
           <h2 className="mt-4 text-lg font-semibold">Claudio Dos Santos</h2>
           <h3>Desenvolvedor De Software</h3>
@@ -131,7 +142,10 @@ export default function Home() {
         <h3 className="text-lg">Contato</h3>
         <p>Email: claudiodsantoss7@gmail.com</p>
         <p>
-          Linkedin: <a href="https://www.linkedin.com/in/claudio-d-5b78b9260">Clique Aqui</a>
+          Linkedin:{" "}
+          <a href="https://www.linkedin.com/in/claudio-d-5b78b9260">
+            Clique Aqui
+          </a>
         </p>
         <p>
           Github: <a href="https://github.com/claudsaints">Clique Aqui</a>
@@ -139,4 +153,4 @@ export default function Home() {
       </footer>
     </div>
   );
-};
+}
