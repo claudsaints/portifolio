@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import Lottie from "react-lottie";
 import animationData from "../Animation - 1729186373014.json";
+
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+
 
 interface ProjectProps {
   project: {
