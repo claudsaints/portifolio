@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import animationData from "../animation.json";
 import { useState, useEffect } from "react";
-import React from "react";
-import  Lottie  from "react-lottie-player";
+
 
 interface ProjectProps {
   project: {
@@ -33,14 +31,7 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
 
   return (
     <>
-      <div className="absolute z-0 lg:left-[58%] md:left-0 hidden lg:flex">
-        <Lottie
-          loop
-          animationData={animationData}
-          play
-          style={{ width: 400, height: 400 }}
-        />
-      </div>
+
       <div
         className={`relative z-40 sflex flex-col items-center p-8 h-full w-full md:w-2/4 sm:w-full border-x-stone-700 shadow-stone-950 shadow-xl ${colorClass} bg-gray-900 rounded-lg transition-all duration-300 transform hover:scale-105 text-center`}
       >
