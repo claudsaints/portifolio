@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import animationData from "../animation.json";
-import { useState,useEffect } from "react";
-import Lottie from 'react-lottie';
-
-
-
+import { useState, useEffect } from "react";
+import React from "react";
+import  Lottie  from "react-lottie-player";
 
 interface ProjectProps {
   project: {
-    id: number
+    id: number;
     title: string;
     description: string;
     deployUrl?: string; // Link para o deploy
@@ -28,15 +26,6 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
   if (!project || !project.title || !project.description) {
     return null; // Ou algum fallback se não houver dados
   }
-  
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   if (!isReady) {
     return <div>Loading...</div>;
@@ -45,7 +34,12 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
   return (
     <>
       <div className="absolute z-0 lg:left-[58%] md:left-0 hidden lg:flex">
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <Lottie
+          loop
+          animationData={animationData}
+          play
+          style={{ width: 400, height: 400 }}
+        />
       </div>
       <div
         className={`relative z-40 sflex flex-col items-center p-8 h-full w-full md:w-2/4 sm:w-full border-x-stone-700 shadow-stone-950 shadow-xl ${colorClass} bg-gray-900 rounded-lg transition-all duration-300 transform hover:scale-105 text-center`}
