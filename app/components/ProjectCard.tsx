@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import animationData from "../Animation - 1729186373014.json";
+import animationData from "../animation.json";
+import { useState,useEffect } from "react";
+import Lottie from 'react-lottie';
 
-import dynamic from 'next/dynamic';
-const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+
 
 
 interface ProjectProps {
@@ -18,6 +19,16 @@ interface ProjectProps {
 }
 
 function ProjectCard({ project, colorClass }: ProjectProps) {
+  const [isReady, setIsReady] = useState(false);
+  useEffect(() => {
+    if (project) {
+      setIsReady(true);
+    }
+  }, [project]);
+  if (!project || !project.title || !project.description) {
+    return null; // Ou algum fallback se não houver dados
+  }
+  
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -26,6 +37,10 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  if (!isReady) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>

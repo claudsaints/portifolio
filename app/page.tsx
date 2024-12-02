@@ -23,18 +23,17 @@ const colors = [
 ];
 
 export default function Home() {
-
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [currentTechIndex, setCurrentTechIndex] = useState(0);
 
   const nextProject = () => {
-    if (projects.length > 0) {
+    if (projects && projects.length > 0) {
       setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
     }
   };
 
   const prevProject = () => {
-    if (projects.length > 0) {
+    if (projects && projects.length > 0) {
       setCurrentProjectIndex(
         (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
       );
@@ -42,19 +41,13 @@ export default function Home() {
   };
 
   const nextTech = () => {
-    if (technologies.length > 0) {
-      setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
-    }
+    setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
   };
 
-
   useEffect(() => {
-    if (technologies.length > 0) {
-      const interval = setInterval(nextTech, 3000);
-      return () => clearInterval(interval);
-    }
-  }, []); 
-  
+    const interval = setInterval(nextTech, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col bg-black text-white">
@@ -134,6 +127,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+ 
+    
 
       <footer
         id="contato"
