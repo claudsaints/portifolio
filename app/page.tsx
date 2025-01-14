@@ -1,26 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { projects } from "./data/project";
 import { technologies } from "./data/tec";
 import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import TechnologyCard from "./components/TecnologyCard";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import {
+  FaArrowAltCircleRight,
+  FaArrowAltCircleLeft,
+  FaClipboard,
+} from "react-icons/fa";
 import Image from "next/image";
 import profilePic from "./assets/p_picture.jpg";
 
-const colors = [
-  // Cinza médio para cinza escuro
-  "bg-gradient-to-r from-gray-500 to-gray-700",
-
-  // Cinza escuro para cinza muito escuro
-  "bg-gradient-to-r from-gray-700 to-gray-900",
-
-  // Cinza escuro a preto
-  "bg-gradient-to-r from-gray-800 to-black",
-];
+const colors = ["bg-gradient-to-r from-gray-500 to-gray-700"];
 
 export default function Home() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -44,6 +38,12 @@ export default function Home() {
     setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
   };
 
+  const copyEmail = () => {
+    navigator.clipboard.writeText("claudiodsantoss7@gmail.com").then(() => {
+      alert("E-mail copiado!");
+    });
+  };
+
   useEffect(() => {
     const interval = setInterval(nextTech, 3000);
     return () => clearInterval(interval);
@@ -55,28 +55,22 @@ export default function Home() {
         <a href="#contato">Contato</a>
       </header>
       <Section>
-        <div className="flex flex-col items-center mt-3">
+        <div className="flex items-center justify-center mt-6 space-x-8">
           <Image
             src={profilePic}
-            alt="Perfil"
-            className="rounded-full border-4 border-white shadow-lg  mt-4 w-64 h-64"
+            alt="Claudio Dos Santos"
+            className="w-64 h-64 object-cover rounded-lg border-4 border-white shadow-lg"
           />
-          <h2 className="mt-4 text-lg font-semibold">Claudio Dos Santos</h2>
-          <h3>Desenvolvedor De Software</h3>
-          <p className="text-gray-400 text-justify w-3/4 sm:w-2/4">
-            Sou desenvolvedor full-stack com uma paixão por criar soluções que
-            façam a diferença. Sou proativo e aprendo rápido, o que me permite
-            me adaptar facilmente a novas tecnologias e desafios. Adoro
-            trabalhar em equipe, onde posso colaborar e aprender com os outros,
-            sempre buscando melhorar cada vez mais. Tenho experiência com
-            tecnologias como JavaScript, TypeScript, React, Node.js, NestJS, e
-            Spring, além de trabalhar com bancos de dados como PostgreSQL, MySQL
-            e MongoDB. O que me motiva é ver o impacto das soluções que crio, e
-            estou sempre em busca de novos projetos que me desafiem e me
-            permitam crescer. Se você está procurando por um desenvolvedor
-            apaixonado, disposto a aprender e contribuir com ideias novas,
-            ficarei feliz em conectar!
-          </p>
+          <div className="flex flex-col text-center sm:text-left ">
+            <h2 className="text-2xl font-semibold">Claudio Dos Santos</h2>
+            <h3 className="text-xl text-gray-400">Desenvolvedor De Software</h3>
+            <p className="text-gray-400 mt-2">
+              Desenvolvedor com foco em soluções eficientes. Tenho experiência
+              em tecnologias como JavaScript, TypeScript, React, Node.js e banco
+              de dados. Busco sempre novos desafios e oportunidades para
+              aprender.
+            </p>
+          </div>
         </div>
       </Section>
 
@@ -84,27 +78,21 @@ export default function Home() {
         <div className="flex flex-row sm:gap-5:m-3:h-full flex-grow items-center justify-around relative mb-8 h-3/4 ">
           <button
             onClick={prevProject}
-            className="z-40 text-black bg-white  rounded-full  hover:bg-gray-700 relative left-10"
+            className="z-40 text-black bg-white rounded-full hover:bg-gray-700 p-3"
           >
-            <FaArrowAltCircleLeft size={50} />
+            <FaArrowAltCircleLeft size={30} />
           </button>
-          <motion.div
-            key={currentProjectIndex}
-            initial={{ rotateY: 0 }}
-            animate={{ rotateY: 360 }}
-            transition={{ duration: 0.6 }}
-            className="flex-grow h-full w-full flex justify-center items-center  sm:w-full"
-          >
-            <ProjectCard
-              project={projects[currentProjectIndex]}
-              colorClass={colors[currentProjectIndex % colors.length]}
-            />
-          </motion.div>
+
+          <ProjectCard
+            project={projects[currentProjectIndex]}
+            colorClass={colors[currentProjectIndex % colors.length]}
+          />
+
           <button
             onClick={nextProject}
-            className="z-40 text-black  bg-white  rounded-full  hover:bg-gray-700 relative right-10"
+            className="z-40 text-black bg-white rounded-full hover:bg-gray-700 p-3"
           >
-            <FaArrowAltCircleRight size={50} />
+            <FaArrowAltCircleRight size={30} />
           </button>
         </div>
       </Section>
@@ -127,8 +115,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
- 
-    
 
       <footer
         id="contato"
@@ -136,6 +122,12 @@ export default function Home() {
       >
         <h3 className="text-lg">Contato</h3>
         <p>Email: claudiodsantoss7@gmail.com</p>
+        <button
+          onClick={copyEmail}
+          className="bg-black text-white py-2 px-6 rounded-lg hover:bg-gray-500 transition"
+        >
+          <FaClipboard className="inline mr-2" /> Copiar E-mail
+        </button>
         <p>
           Linkedin:{" "}
           <a href="https://www.linkedin.com/in/claudio-d-5b78b9260">
