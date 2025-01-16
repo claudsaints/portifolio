@@ -78,9 +78,9 @@ export default function Home() {
         <div className="flex flex-row sm:gap-5:m-3:h-full flex-grow items-center justify-around relative mb-8 h-3/4 ">
           <button
             onClick={prevProject}
-            className="z-40 text-black bg-white rounded-full hover:bg-gray-700 p-3"
+            className="z-40 text-black bg-white rounded-full hover:bg-gray-700  sm:absolute  left-0 w-10 h-10 "
           >
-            <FaArrowAltCircleLeft size={30} />
+            <FaArrowAltCircleLeft style={{height: '100%', width: '100%'}}/>
           </button>
 
           <ProjectCard
@@ -90,9 +90,9 @@ export default function Home() {
 
           <button
             onClick={nextProject}
-            className="z-40 text-black bg-white rounded-full hover:bg-gray-700 p-3"
+            className="z-40 text-black bg-white rounded-full hover:bg-gray-700  sm:absolute right-0 w-10 h-10 "
           >
-            <FaArrowAltCircleRight size={30} />
+            <FaArrowAltCircleRight style={{height: '100%', width: '100%'}}/>
           </button>
         </div>
       </Section>

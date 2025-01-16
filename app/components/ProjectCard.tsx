@@ -24,11 +24,7 @@ function ProjectCard({ project, colorClass }: ProjectProps) {
     return (
       <motion.div
         className={`relative z-30 flex flex-col items-center p-8 h-full w-full md:w-2/4 sm:w-full border border-gray-700 shadow-xl rounded-lg transition-all duration-300 transform hover:scale-105 ${colorClass}`}
-        whileHover={{ scale: 1.05, rotate: 5 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+       
       >
         <h1 className="text-4xl font-bold text-white">{title}</h1>
         <p className="mt-2  text-gray-200">{description}</p>
