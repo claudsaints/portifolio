@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from "react";
-import Navigation from "@/app/components/Navigation"
+
 
 export default function Home() {
    return (

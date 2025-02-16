@@ -17,7 +17,7 @@ export default function SocialMedia() {
         <a href="https://www.linkedin.com/in/claudio-d-5b78b9260" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-xl text-white hover:text-blue-300 transition-colors" />
         </a>
-        <button onCLick={copyEmail}  >
+        <button onClick={copyEmail}  >
           <FaGoogle className="text-xl text-white hover:text-red-400 transition-colors" />
         </button>
       </div>

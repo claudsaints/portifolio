@@ -1,20 +1,20 @@
-import { projects } from "@/app/data/project.ts";
+import { projects } from "@/app/data/project";
 import ProjectCard from "@/app/components/ProjectCard";
-export default function Project(){
-  return(
+export default function Project() {
+  return (
     <>
 
-        <div className="projects-container mb-5" id="projects">
+      <div className="projects-container mb-5" id="projects">
 
-      <div className="projects-grid">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                project={project}
-              />
-            ))}
-          </div>
-              </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+            />
+          ))}
+        </div>
+      </div>
 
     </>
   )
