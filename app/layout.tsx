@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import SocialMedia from "@/app/components/SocialMedia";
 import "./globals.css";
 import favicon from '@/app/favicon.ico'
-
+import Navigation from "@/app/components/Navigation";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -30,9 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
+        <Navigation/>
         {children}
+        <SocialMedia/>
       </body>
     </html>
   );
