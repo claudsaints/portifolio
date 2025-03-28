@@ -29,7 +29,7 @@ function ProjectCard({ project }: ProjectProps) {
         <a className="no-underline mt-5" href={repoUrl} target="_blank" rel="noreferrer">
           <h2 className="text-3xl mt-4 uppercase font-bold">{title}</h2>
         </a>
-        <p className="mt-2 text-md  font-semibold">Tecnologias: {technologies}</p>
+        <p className="mt-2 h-12 text-md  font-semibold">Tecnologias: {technologies}</p>
         <p className="mt-2 mb-6 lg:h-8 md:12 sm:20 ">{description}</p>
 
         <div className="mt-4 flex justify-left space-x-6">

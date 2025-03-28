@@ -4,7 +4,7 @@
 
 
 body {
-  @apply m-0 font-sans text-[1.1rem] antialiased;
+  @apply m-0 font-sans text-[1.1rem] antialiased h-screen w-screen;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +32,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 
 .navigation-bar {
-  @apply flex justify-between bg-[#0d1116];
+  @apply flex justify-between z-10 bg-[#0d1116];
 
   button {
     @apply text-[1.1rem] font-sans uppercase px-[6px] py-[10px];
@@ -59,7 +59,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .social-media {
-  @apply absolute bottom-2/4 top-2/4 right-0 flex flex-col items-center gap-4 bg-glow h-28 py-2 px-4 rounded-tl-lg rounded-bl-lg;
+  @apply absolute bottom-2/4 top-2/4 opacity-100 right-0 flex flex-col items-center gap-4 bg-glow h-28 py-2 px-4 rounded-tl-lg rounded-bl-lg  lg:opacity-100 md:opacity-50;
 }
 
 
@@ -127,11 +127,11 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .zoom {
-  @apply rounded-[5px] transition-transform duration-[200ms] mx-auto;
+  @apply rounded-[5px] transition-transform duration-[200ms] mx-auto shadow-md;
 }
 
 .zoom:hover {
-  @apply scale-105;
+  @apply scale-105 shadow-sm;
 }
 @media (max-width: 700px) {
   .projects-container {
