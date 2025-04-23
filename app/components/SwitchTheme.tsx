@@ -1,25 +1,21 @@
-"use client"
+"use client";
 
-
-import { useState, useEffect } from 'react';
-import { FiMoon,FiSun } from "react-icons/fi";
+import { useState, useEffect } from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
 export default function SwitchTheme() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      localStorage.setItem("theme","light");
-      document.documentElement.classList.remove('dark');
-
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
     }
   }, [theme]);
 
@@ -28,7 +24,7 @@ export default function SwitchTheme() {
       onClick={toggleTheme}
       className="px-4 py-2 bg-glow text-white rounded-xl"
     >
-      {theme === 'light' ? <FiMoon color='white'/> : <FiSun color='white'/>}
+      {theme === "light" ? <FiMoon color="white" /> : <FiSun color="white" />}
     </button>
   );
-};
+}

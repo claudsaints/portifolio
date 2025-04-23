@@ -3,23 +3,20 @@ import { useState, useEffect } from "react";
 import { technologies } from "@/app/data/tec";
 import TechnologyCard from "@/app/components/TecnologyCard";
 
-
-export default function Tecnology(){
-
+export default function Tecnology() {
   const [currentTechIndex, setCurrentTechIndex] = useState(0);
 
   const nextTech = () => {
     setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
   };
 
-    useEffect(() => {
-      const interval = setInterval(nextTech, 3000);
-      return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(nextTech, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-  return(
+  return (
     <>
-
       <h2 className="text-xl text-glow uppercase font-bold m-6">Tecnologias</h2>
 
       <TechnologyCard tech={technologies[currentTechIndex]} />
@@ -34,7 +31,6 @@ export default function Tecnology(){
           ></button>
         ))}
       </div>
-
     </>
-  )
+  );
 }

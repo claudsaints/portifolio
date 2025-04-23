@@ -59,14 +59,14 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .social-media {
-  @apply absolute bottom-2/4 top-2/4 opacity-100 right-0 flex flex-col items-center gap-4 bg-glow h-28 py-2 px-4 rounded-tl-lg rounded-bl-lg  lg:opacity-100 md:opacity-50;
+  @apply absolute bottom-2/4 top-2/4 opacity-100 right-0 flex flex-col items-center gap-4 bg-glow h-28 py-2 px-4 rounded-tl-lg rounded-bl-lg  lg:opacity-100 ;
 }
-
 
 /* Items Container */
 .items-container {
   @apply px-[10%] pt-[5%] text-left flex flex-col justify-center;
 }
+
 /* DARK */
 .dark {
   body {

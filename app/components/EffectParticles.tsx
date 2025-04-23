@@ -75,7 +75,7 @@ export const EffectParticles = () => {
         links: {
           color: "#8E1616",
           distance: 150,
-          enable: true,
+          enable: false,
           opacity: 0.5,
           width: 1,
         },
@@ -86,7 +86,7 @@ export const EffectParticles = () => {
             default: OutMode.out,
           },
           random: false,
-          speed: 6,
+          speed: 2,
           straight: false,
         },
         number: {
@@ -102,7 +102,7 @@ export const EffectParticles = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 6 },
         },
       },
       detectRetina: true,

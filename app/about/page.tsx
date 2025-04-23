@@ -2,7 +2,7 @@ import Tecnology from "@/app/components/Tecnology";
 export default function About() {
   return (
     <>
-      <div className=" ml-6 mr-6 flex mt-4 items-left justify-center flex-col text-justify">
+      <div className=" mx-6 md:mx-6 landscape-mobile:mx-16  flex mt-4 items-left justify-center flex-col text-justify">
         <p className="mt-2 mb-2">
           Oi, eu sou Claudio! Sou uma pessoa curiosa, sempre em busca de novas experiências e oportunidades de crescimento.
         </p>
