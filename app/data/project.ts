@@ -1,5 +1,21 @@
 export const projects = [
   {
+    id: 9,
+    title: 'LabWind',
+    description: 'Plataforma de visualização de dados meteorológicos em parceria com o laboratório LabWind/UNIFEI.',
+    repoUrl: 'https://github.com/Steel-Hard/LabWind',
+    technologies: 'React, Node.js, MongoDB, MySql, Express, Figma',
+    thumbnail: 'logo_labw' 
+  },
+  {
+    id: 7,
+    title: 'ScrumFlow',
+    description: 'Sistema de gerenciamento de projetos inspirado no Trello, com metodologia Scrum, backend em Node.js e TypeScript.',
+    repoUrl: 'https://github.com/claudsaints/scrumflow_backend',
+    technologies: 'Java, Spring, PostgreSQL, Scrum',
+    thumbnail: 'logo_scfl' 
+  },
+  {
     id: 1,
     title: 'Vital-U',
     description: "Uma aplicação completa para gestão de calorias, desenvolvida com foco na saúde e bem-estar.",
@@ -24,6 +40,14 @@ export const projects = [
     repoUrl: 'https://github.com/claudsaints/corn_theater',
     technologies: 'React, Node.js, JWT, PostgreSQL',
     thumbnail: 'logo_corn'
+  },
+  {
+    id: 8,
+    title: 'Steel Brain',
+    description: 'Bot do Discord integrado à IA para geração de imagens e textos, utilizando APIs de inteligência artificial.',
+    repoUrl: 'https://github.com/claudsaints/steel_brain',
+    technologies: 'Node.js, Discord.js, OpenAI API, TypeScript',
+    thumbnail: 'logo_stbr' 
   },
   {
     id: 4,

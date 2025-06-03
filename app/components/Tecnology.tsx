@@ -11,13 +11,13 @@ export default function Tecnology() {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextTech, 3000);
+    const interval = setInterval(nextTech, 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      <h2 className="text-xl text-glow uppercase font-bold m-6">Tecnologias</h2>
+      <h2 className="text-xl text-glow uppercase font-bold mx-12">Tecnologias</h2>
 
       <TechnologyCard tech={technologies[currentTechIndex]} />
       <div className="flex mt-4 items-center mb-5 justify-center">

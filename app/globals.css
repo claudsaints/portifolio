@@ -32,7 +32,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 
 .navigation-bar {
-  @apply flex justify-between z-10 bg-[#0d1116];
+  @apply flex justify-between z-10 bg-transparent;
 
   button {
     @apply text-[1.1rem] font-sans uppercase px-[6px] py-[10px];
@@ -77,9 +77,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
     @apply text-glow transition-all duration-[150ms] ease-in-out;
   }
 
-  .navigation-bar {
-    @apply bg-[#0d1116];
-  }
+ 
 
   p,  a,  h1,  h2, h3, h4, h5, label, button {
     @apply text-white;
@@ -92,9 +90,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 /* DARK */
 
 /* Light Mode */
-  .navigation-bar {
-    @apply bg-[#f8f9fa];
-  }
+
 
   a:hover {
     @apply text-glow transition-all duration-[150ms] ease-in-out;
