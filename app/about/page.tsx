@@ -15,7 +15,7 @@ export default function About() {
   return (
     <>
       <div className="mx-8 md:mx-14 landscape-mobile:mx-16 flex mt-4 items-left justify-center flex-col text-justify">
-        <h1 className="text-3xl md:text-4xl font-bold text-glow mb-4">Sobre mim</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-glow mb-4 font-orbitron">Sobre mim</h1>
         <p className="mb-3 text-lg leading-relaxed">
           Olá! Eu sou <span className="font-bold text-c_glow">Claudio dos Santos Siqueira</span>, um desenvolvedor Full Stack apaixonado por tecnologia e inovação. Minha jornada na programação começou por curiosidade e rapidamente se transformou em uma carreira dedicada a criar soluções que realmente fazem a diferença.
         </p>
@@ -25,7 +25,7 @@ export default function About() {
         <p className="mb-3 text-lg leading-relaxed">
           Entre os projetos que mais me orgulho estão:
         </p>
-        <ul className="list-disc list-inside mb-3 text-base  ">
+        <ul className="list-disc list-inside mb-3 text-lg  ">
           <li><span className="font-semibold text-c_glow">LabWind</span> — Plataforma de visualização de dados meteorológicos em parceria com o laboratório LabWind. <a href="https://github.com/Steel-Hard/LabWind" target="_blank" className="underline text-c_red">Ver no GitHub</a></li>
           <li><span className="font-semibold text-c_glow">ScrumFlow</span> — Sistema de gerenciamento de projetos inspirado no Trello, com metodologia Scrum, backend em Java, Spring. <a href="https://github.com/claudsaints/scrumflow_backend" target="_blank" className="underline text-c_red">Ver no GitHub</a></li>
           <li><span className="font-semibold text-c_glow">Steel Brain</span> — Bot do Discord integrado à IA para geração de imagens e textos, utilizando APIs de inteligência artificial. <a href="https://github.com/claudsaints/steel_brain" target="_blank" className="underline text-c_red">Ver no GitHub</a></li>

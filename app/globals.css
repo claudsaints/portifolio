@@ -27,9 +27,12 @@ a:hover {
 
 p, a, h1, h2, h3, h4, h5, label, button {
   @apply text-black font-sans
-
 }
 
+
+p{
+  @apply text-[1.1rem] font-gest;
+}
 
 .navigation-bar {
   @apply flex justify-between z-10 bg-transparent;

@@ -58,7 +58,7 @@ export const EffectParticles = () => {
           speed: 0.5, 
         },
         color: {
-          value: isDark ? "#fff" : "#8E1616", // cor 
+          value: isDark ? "#fff" : "#9e95958d", // cor 
         }
       },
     }),

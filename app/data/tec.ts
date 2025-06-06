@@ -33,7 +33,7 @@ export const technologies = [
     id: 6,
     title: 'Next.js',
     description: 'Framework baseado em React para o desenvolvimento de aplicações web de alto desempenho, com recursos como renderização no servidor (SSR).',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg', 
   },
   {
     id: 7,
@@ -45,7 +45,7 @@ export const technologies = [
     id: 8,
     title: 'Express',
     description: 'Framework minimalista e flexível para Node.js, usado para construir aplicativos web e APIs robustas.',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg', 
   },
   {
     id: 9,

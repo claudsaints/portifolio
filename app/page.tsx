@@ -10,7 +10,7 @@ export default function Home() {
       <EffectParticles />
       <main className="container h-2/4 mx-auto my-auto flex flex-col items-center justify-center lg:mb-0 lg:mx-auto md:my-20  sm:mb-0">
         <motion.h1
-          className="text-6xl font-bold text-center text-glow uppercase"
+          className="text-8xl font-bold text-center text-glow uppercase font-tysla"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -18,7 +18,7 @@ export default function Home() {
           Claudio Dos Santos Siqueira
         </motion.h1>
         <motion.p
-          className="text-2xl font-medium mt-4 text-center text-c_glow"
+          className="text-3xl font-bold mt-4 text-center text-c_glow font-orbitron"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -26,7 +26,7 @@ export default function Home() {
           Software Developer
         </motion.p>
         <motion.p
-          className="text-lg mt-2 text-center "
+          className="text-lg mt-2 font-light text-center font-gestMono"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
