@@ -21,7 +21,7 @@ export default function Tecnology() {
         pagination={{ clickable: true, dynamicBullets: true }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-3/5 h-[420px]"
+        className="w-full md:w-3/5 sm:w-full h-[420px] landscape-mobile:w-full"
         onSlideChange={(swiper) => swiper.update()}
       >
         {technologies.map((tech, index) => (

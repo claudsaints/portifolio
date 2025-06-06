@@ -13,7 +13,7 @@ function TechnologyCard({
         alt={tech.title}
         width={128}
         height={128}
-        className="w-32 h-32 mb-4 bg-white rounded-[0.5rem]"
+        className="w-32 h-32 mb-4 bg-white rounded-[0.5rem] "
       />
       <h3 className="text-xl font-semibold text-center">{tech.title}</h3>
       <p className="mx-2 text-justify text-base mt-2">{tech.description}</p>
