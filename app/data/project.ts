@@ -6,7 +6,8 @@ export const projects = [
     repoUrl: 'https://github.com/Steel-Hard/LabWind',
     deployUrl: 'https://labwind.vercel.app/',
     technologies: 'React, Node.js, MongoDB, MySql, Express, Figma',
-    thumbnail: 'logo_labw' 
+    thumbnail: 'logo_labw' ,
+    youtube: "https://youtu.be/SNvCKSIZHP4?si=maEajEtiZDSL3rbF"
   },
   {
     id: 7,
@@ -29,6 +30,7 @@ export const projects = [
     id: 2,
     title: "Merlin's Book",
     description: "Uma aplicação completa para avaliação de livros, desenvolvida com foco nos leitores.",
+    deployUrl: "https://merlins-book.vercel.app/",
     repoUrl: 'https://github.com/claudsaints/merlins_book',
     technologies: 'Vue.js, Node.js, Nest.js, Prisma, JWT, Mysql',
     thumbnail:'logo_merl'
@@ -37,7 +39,6 @@ export const projects = [
     id: 3,
     title: 'Corn Theater',
     description: 'Plataforma para busca de filmes e interação. Permite pesquisar títulos, acessar informações detalhadas.',
-    deployUrl: 'https://corn-theater.vercel.app/',
     repoUrl: 'https://github.com/claudsaints/corn_theater',
     technologies: 'React, Node.js, JWT, PostgreSQL',
     thumbnail: 'logo_corn'

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { FaLink, FaGithub } from "react-icons/fa";
+import { FaLink, FaGithub, FaYoutube } from "react-icons/fa";
 import { useMemo } from "react";
 import Image from "next/image";
 
@@ -13,11 +13,12 @@ interface ProjectProps {
     repoUrl: string;
     technologies: string;
     thumbnail: string;
+    youtube?: string;
   };
 }
 
 function ProjectCard({ project }: ProjectProps) {
-  const { title, description, deployUrl, repoUrl, technologies, thumbnail } =
+  const { title, description, deployUrl, repoUrl, technologies, thumbnail,youtube } =
     project;
 
   //memorização
@@ -67,6 +68,16 @@ function ProjectCard({ project }: ProjectProps) {
               className="text-lg  flex items-center"
             >
               <FaGithub className="mr-2" /> Repositório
+            </a>
+          )}
+            {youtube && (
+            <a
+              href={youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg  flex items-center"
+            >
+              <FaYoutube className="mr-2" /> Vídeo
             </a>
           )}
         </div>

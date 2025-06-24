@@ -29,7 +29,7 @@ const tysla = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ClaudSaints Portfolio",
+  title: "ClaudSaints",
   description: "My professional resume",
   icons: [{ rel: "icon", url: favicon.src }],
 };
